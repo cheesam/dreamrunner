@@ -1,0 +1,15 @@
+<h2><%= @dream.name %></h2>
+<br>
+<p>Category: <%= @dream.category %></p>
+<p>Description: <%= @dream.description %></p>
+<p>Price: <%= @dream.price %></p>
+
+
+<%= link_to "Edit", edit_dream_path(@dream) %>
+<br>
+<%= link_to "Delete", dream_path(@dream),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %>
+<br>
+<%= link_to "Back", dreams_path %>
+<br>

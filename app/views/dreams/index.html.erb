@@ -1,0 +1,17 @@
+<h1>The Dream Repertoire</h1>
+<br>
+<div class="row">
+    <% @dreams.each do |dream| %>
+      <div class="col-lg-3">
+        <div class="card">
+          <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+          <div class="card-body">
+            <h5 class="card-title"><%= link_to(dream.name, dream_path(dream)) %></h5>
+            <p class="card-text"><%= dream.description %></p>
+          </div>
+          <!-- <div class="card-footer">
+          </div> -->
+        </div>
+      </div>
+    <% end %>
+  </div>
