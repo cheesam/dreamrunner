@@ -3,6 +3,14 @@
 <p>Category: <%= @dream.category %></p>
 <p>Description: <%= @dream.description %></p>
 <p>Price: <%= @dream.price %></p>
+<h3>Reviews</h3>
+<ul>
+<% @dream.reviews.each do |r| %>
+<li><%= r.content %></li>
+<li>Rating: <%= r.rating %></li>
+<li><%= link_to "Full Review", dream_review_path(@dream, r) %>
+<% end %>
+</ul>
 
 
 <%= link_to "Edit", edit_dream_path(@dream) %>
@@ -10,6 +18,8 @@
 <%= link_to "Delete", dream_path(@dream),
       method: :delete,
       data: { confirm: "Are you sure?" } %>
+<br>
+<%= link_to "Write a review", new_dream_review_path(@dream) %>
 <br>
 <%= link_to "Back", dreams_path %>
 <br>
