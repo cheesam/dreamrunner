@@ -3,6 +3,7 @@
 <p>Category: <%= @dream.category %></p>
 <p>Description: <%= @dream.description %></p>
 <p>Price: <%= @dream.price %></p>
+<%= cl_image_tag @dream.photo, height: 300, width: 400, crop: :fill %>
 
 
 <%= link_to "Edit", edit_dream_path(@dream) %>
