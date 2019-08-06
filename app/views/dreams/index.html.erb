@@ -1,6 +1,14 @@
-<h1>The Dream Repertoire</h1>
+<!-- Hero Section -->
+<div class="hero-image">
+  <div class="hero-text">
+    <h1>The Dream Repertoire</h1>
+  </div>
+</div>
 <br>
-<div class="row">
+
+<!-- Display dreams in cards -->
+<div class="container">
+  <div class="row">
     <% @dreams.each do |dream| %>
       <div class="col-lg-3">
         <div class="card">
@@ -15,3 +23,4 @@
       </div>
     <% end %>
   </div>
+</div>
