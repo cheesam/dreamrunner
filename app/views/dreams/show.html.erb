@@ -22,8 +22,6 @@
     </div>
   </div>
 
-
-
   <%= link_to "Edit", edit_dream_path(@dream) %>
   <br>
   <%= link_to "Delete", dream_path(@dream),
@@ -34,4 +32,6 @@
   <br>
   <%= link_to "Back", dreams_path %>
   <br>
+
+  <%= link_to "Book the Dream", new_dream_sleep_path(@dream) %>
 </div>
