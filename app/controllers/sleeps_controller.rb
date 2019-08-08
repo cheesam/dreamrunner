@@ -7,7 +7,6 @@ class SleepsController < ApplicationController
 
   def new
     # we need @dream in our `simple_form_for`
-    @dream = Dream.find(params[:dream_id])
     @sleep = Sleep.new
   end
 
@@ -15,6 +14,7 @@ class SleepsController < ApplicationController
     @sleep = Sleep.new(sleep_params)
   # we need `dream_id` to asssociate sleep with corresponding dream
     @sleep.dream = @dream
+    @sleep.user = current_user
     if @sleep.save
       redirect_to dream_path(@dream)
     else
@@ -46,6 +46,6 @@ class SleepsController < ApplicationController
   end
 
   def sleep_params
-    params.require(:sleep).permit(:description, :ingredient_id)
+    params.require(:sleep).permit(:date, :dream_id)
   end
 end
