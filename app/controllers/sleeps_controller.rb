@@ -16,7 +16,7 @@ class SleepsController < ApplicationController
     @sleep.dream = @dream
     @sleep.user = current_user
     if @sleep.save
-      redirect_to dream_path(@dream)
+      redirect_to user_path(current_user)
     else
       render :new
     end
