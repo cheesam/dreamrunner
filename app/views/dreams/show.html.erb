@@ -3,14 +3,13 @@
   <h1><%= @dream.name %></h1>
   <hr />
   <div class="d-flex">
-    <div class="mr-auto card">
+    <div class="mr-auto">
       <%= cl_image_tag @dream.photo, height: 400, width: 500 %>
       <h3>Details</h3>
       <p>Category: <%= @dream.category %></p>
       <p>Description: <%= @dream.description %></p>
       <p>Price: <%= @dream.price %></p>
-    </div>
-    <div class="ml-auto card">
+
       <h3>Reviews</h3>
       <ul>
       <% @dream.reviews.each do |r| %>
@@ -19,6 +18,9 @@
       <li><%= link_to "Full Review", dream_review_path(@dream, r) %>
       <% end %>
       </ul>
+    </div>
+    <div class="ml-auto card">
+      <%= link_to "Book the Dream", new_dream_sleep_path(@dream) %>
     </div>
   </div>
 
@@ -32,6 +34,4 @@
   <br>
   <%= link_to "Back", dreams_path %>
   <br>
-
-  <%= link_to "Book the Dream", new_dream_sleep_path(@dream) %>
 </div>
