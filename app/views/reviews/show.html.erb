@@ -1,0 +1,17 @@
+<h2><%= @review.dream.name %></h2>
+<br>
+<p>Content: <%= @review.content %></p>
+<p>Accuracy: <%= @review.accuracy %></p>
+<p>Design: <%= @review.design %></p>
+<p>Value: <%= @review.value %></p>
+<p>Overall rating: <%= @review.rating %></p>
+
+
+<%= link_to "Edit", edit_dream_review_path(@dream, @review) %>
+<br>
+<%= link_to "Delete", review_path(@review),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %>
+<br>
+<%= link_to "Back", dreams_path %>
+<br>
