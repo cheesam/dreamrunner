@@ -1,27 +1,37 @@
-<h2><%= @dream.name %></h2>
-<br>
-<p>Category: <%= @dream.category %></p>
-<p>Description: <%= @dream.description %></p>
-<p>Price: <%= @dream.price %></p>
-<h3>Reviews</h3>
-<ul>
-<% @dream.reviews.each do |r| %>
-<li><%= r.content %></li>
-<li>Rating: <%= r.rating %></li>
-<li><%= link_to "Full Review", dream_review_path(@dream, r) %>
-<% end %>
-</ul>
-<%= cl_image_tag @dream.photo, height: 300, width: 400, crop: :fill %>
+<!-- <%= cl_image_tag @dream.photo, class: "background-image" %> -->
+<div class="container">
+  <h1><%= @dream.name %></h1>
+  <hr />
+  <div class="d-flex">
+    <div class="mr-auto card">
+      <%= cl_image_tag @dream.photo, height: 400, width: 500 %>
+      <h3>Details</h3>
+      <p>Category: <%= @dream.category %></p>
+      <p>Description: <%= @dream.description %></p>
+      <p>Price: <%= @dream.price %></p>
+    </div>
+    <div class="ml-auto card">
+      <h3>Reviews</h3>
+      <ul>
+      <% @dream.reviews.each do |r| %>
+      <li><%= r.content %></li>
+      <li>Rating: <%= r.rating %></li>
+      <li><%= link_to "Full Review", dream_review_path(@dream, r) %>
+      <% end %>
+      </ul>
+    </div>
+  </div>
 
 
-<%= link_to "Edit", edit_dream_path(@dream) %>
-<br>
-<%= link_to "Delete", dream_path(@dream),
-      method: :delete,
-      data: { confirm: "Are you sure?" } %>
-<br>
-<%= link_to "Write a review", new_dream_review_path(@dream) %>
-<br>
-<%= link_to "Back", dreams_path %>
-<br>
 
+  <%= link_to "Edit", edit_dream_path(@dream) %>
+  <br>
+  <%= link_to "Delete", dream_path(@dream),
+        method: :delete,
+        data: { confirm: "Are you sure?" } %>
+  <br>
+  <%= link_to "Write a review", new_dream_review_path(@dream) %>
+  <br>
+  <%= link_to "Back", dreams_path %>
+  <br>
+</div>
