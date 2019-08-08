@@ -11,6 +11,7 @@
 <li><%= link_to "Full Review", dream_review_path(@dream, r) %>
 <% end %>
 </ul>
+<%= cl_image_tag @dream.photo, height: 300, width: 400, crop: :fill %>
 
 
 <%= link_to "Edit", edit_dream_path(@dream) %>
