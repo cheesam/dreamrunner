@@ -27,6 +27,19 @@ ActiveRecord::Schema.define(version: 2019_08_06_193525) do
     t.index ["user_id"], name: "index_dreams_on_user_id"
   end
 
+  create_table "reviews", force: :cascade do |t|
+    t.string "content"
+    t.bigint "user_id"
+    t.integer "accuracy"
+    t.integer "value"
+    t.integer "design"
+    t.bigint "dream_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["dream_id"], name: "index_reviews_on_dream_id"
+    t.index ["user_id"], name: "index_reviews_on_user_id"
+  end
+
   create_table "sleeps", force: :cascade do |t|
     t.date "date"
     t.bigint "user_id"
@@ -51,6 +64,8 @@ ActiveRecord::Schema.define(version: 2019_08_06_193525) do
   end
 
   add_foreign_key "dreams", "users"
+  add_foreign_key "reviews", "dreams"
+  add_foreign_key "reviews", "users"
   add_foreign_key "sleeps", "dreams"
   add_foreign_key "sleeps", "users"
 end
