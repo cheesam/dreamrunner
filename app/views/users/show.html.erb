@@ -1,0 +1,10 @@
+<h2>My Sleeps:</h2>
+<% @sleeps.each do |sleep| %>
+  <%= sleep.dream.name %>
+  <br>
+  <%= sleep.dream.description %>
+  <br>
+  <%= sleep.date %>
+  <br>
+  <br>
+<% end %>
