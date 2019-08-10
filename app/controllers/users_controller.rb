@@ -3,6 +3,7 @@ class UsersController < ApplicationController
 
   def show
     @sleeps = @user.sleeps
+    @reviews = @user.reviews
   end
 
   private
