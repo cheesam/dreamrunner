@@ -1,4 +1,9 @@
 // CSS for dreams/show function
+.dreams-show-background {
+  background-color: black;
+  color: white;
+}
+
 .details-section {
   padding-right: 5%;
 }
@@ -18,6 +23,7 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   margin-bottom: 2vh;
+  color: black;
 }
 
 .card-review img {
