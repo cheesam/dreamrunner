@@ -6,6 +6,31 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+puts 'Cleaning users...'
+User.destroy_all
+
+puts 'Creating dreamers...'
+users_attributes = [
+  {
+    email: 'sam@dreamrunner.com',
+    password: '123456',
+  },
+  {
+    email: 'egor@dreamrunner.com',
+    password: '123456',
+  },
+  {
+    email: 'david@dreamrunner.com',
+    password: '123456',
+  },
+  {
+    email: 'sunny@dreamrunner.com',
+    password: '123456',
+  }
+]
+
+User.create!(users_attributes)
+puts 'Users created!'
 
 puts 'Cleaning dreams...'
 Dream.destroy_all
@@ -65,7 +90,6 @@ dreams_attributes = [
 Dream.create!(dreams_attributes)
 puts 'Finished dreams!'
 
-
 puts 'Cleaning dreams...'
 Review.destroy_all
 
@@ -75,84 +99,84 @@ reviews_attributes = [
     accuracy: '10',
     value: '10',
     design: '10',
-    dream_id: '1'
+    dream_id: '1',
     user_id: '1'
   },
   {
     accuracy: '10',
     value: '10',
     design: '10',
-    dream_id: '1'
+    dream_id: '1',
     user_id: '2'
   },
   {
     accuracy: '10',
     value: '10',
     design: '10',
-    dream_id: '1'
+    dream_id: '1',
     user_id: '3'
   },
   {
     accuracy: '9',
     value: '9',
     design: '9',
-    dream_id: '2'
+    dream_id: '2',
     user_id: '1'
   },
   {
     accuracy: '9',
     value: '9',
     design: '9',
-    dream_id: '2'
+    dream_id: '2',
     user_id: '2'
   },
   {
     accuracy: '9',
     value: '9',
     design: '9',
-    dream_id: '2'
+    dream_id: '2',
     user_id: '3'
   },
   {
     accuracy: '8',
     value: '8',
     design: '8',
-    dream_id: '3'
+    dream_id: '3',
     user_id: '1'
   },
   {
     accuracy: '8',
     value: '8',
     design: '8',
-    dream_id: '3'
+    dream_id: '3',
     user_id: '2'
   },
   {
     accuracy: '8',
     value: '8',
     design: '8',
-    dream_id: '3'
+    dream_id: '3',
     user_id: '3'
   },
   {
     accuracy: '7',
     value: '7',
     design: '7',
-    dream_id: '4'
+    dream_id: '4',
     user_id: '1'
   },
   {
     accuracy: '7',
     value: '7',
     design: '7',
-    dream_id: '4'
+    dream_id: '4',
     user_id: '2'
   },
   {
     accuracy: '7',
     value: '7',
     design: '7',
-    dream_id: '4'
+    dream_id: '4',
     user_id: '3'
   }
 ]
