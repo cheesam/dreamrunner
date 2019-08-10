@@ -6,6 +6,9 @@ class DreamsController < ApplicationController
   end
 
   def show          # GET /dreams/:id
+    @sleep = Sleep.new
+    @review = Review.new
+    @reviews = @dream.reviews
   end
 
   def new           # GET /dreams/new
