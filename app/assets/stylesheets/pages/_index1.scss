@@ -1,9 +1,12 @@
 // CSS for 'Dreams Repertoire' page
-body {
+
+// body {
+//   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://www.atlas-cybersecurity.com/wp-content/uploads/2018/10/background.jpg")
+// }
+
+.background-container {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://www.atlas-cybersecurity.com/wp-content/uploads/2018/10/background.jpg")
 }
-
-
 
 .dreams-list {
   display: grid;
