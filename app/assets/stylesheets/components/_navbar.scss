@@ -1,6 +1,12 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: black;
+  color: #E900FF;
+  font-family: 'Lexend Tera', sans-serif;
+  transition:.5s;
+  a:hover {
+  color:red;
+}
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -10,3 +16,16 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+.link-colour {
+  color: #E900FF;
+}
+
+// .nav-link {
+//     a {color: #E900FF !important;
+//     text-decoration: none;
+//     &:hover {
+//     color: #E900FF;
+//     }
+//   }
+//  }
