@@ -1,37 +1,79 @@
-<!-- <%= cl_image_tag @dream.photo, class: "background-image" %> -->
 <div class="container">
-  <h1><%= @dream.name %></h1>
+  <h1 style="padding-top: 2vh;"><%= @dream.name %></h1>
   <hr />
-  <div class="d-flex">
-    <div class="mr-auto">
-      <%= cl_image_tag @dream.photo, height: 400, width: 500 %>
-      <h3>Details</h3>
-      <p>Category: <%= @dream.category %></p>
-      <p>Description: <%= @dream.description %></p>
-      <p>Price: <%= @dream.price %></p>
-
-      <h3>Reviews</h3>
-      <ul>
-      <% @dream.reviews.each do |r| %>
-      <li><%= r.content %></li>
-      <li>Rating: <%= r.rating %></li>
-      <li><%= link_to "Full Review", dream_review_path(@dream, r) %>
-      <% end %>
-      </ul>
+  <div class="row">
+    <div class="col-sm-12 col-md-8 details-section">
+      <%= cl_image_tag @dream.photo, height: 400, width: 600 %>
+      <div class="d-flex dream-detail">
+        <ul class="list-group list-group-horizontal">
+          <li class="list-group-item"><strong>Category:</strong> <%= @dream.category %></li>
+          <li class="list-group-item"><strong>Price:</strong> <%= @dream.price %></li>
+        </ul>
+      </div>
+      <div class="dream-description">
+        <h2><strong>Description:</strong></h2>
+        <p><%= @dream.description %></p>
+      </div>
+      <br>
+      <div class="d-flex">
+        <h3>Reviews</h3>
+        <div class="ml-auto">
+          <%= link_to "Write a review", new_dream_review_path(@dream) %>
+        </div>
+      </div>
+      <hr />
+        <div>
+          <% @reviews.each do |review| %>
+          <div class="card-review">
+            <div class="review-card-content">
+              <h2>Content:</h2>
+              <p><%= review.content %></p>
+            </div>
+            <div class="review-card-content">
+              <h2>Accuracy:</h2>
+              <p><%= review.accuracy %></p>
+            </div>
+            <div class="review-card-content">
+              <h2>Design:</h2>
+              <p><%= review.design %></p>
+            </div>
+            <div class="review-card-content">
+              <h2>Value:</h2>
+              <p><%= review.value %></p>
+            </div>
+            <div class="review-card-content">
+              <h2>Overall rating:</h2>
+              <p><%= review.rating %></p>
+            </div>
+            <div class="review-card-content">
+              <h2>Posted by:</h2>
+              <%= cl_image_tag review.user.photo %>
+            </div>
+            <div class="review-card-edit">
+              <%= link_to "Edit Review", edit_dream_review_path(@dream, review) %>
+            </div>
+          </div>
+          <% end %>
+        </div>
     </div>
-    <div class="ml-auto card">
-      <%= link_to "Book the Dream", new_dream_sleep_path(@dream) %>
+    <div class="col-sm-12 col-md-4">
+      <div class="card" style="padding: 20px;">
+        <%= render 'sleeps/form' %>
+      </div>
     </div>
   </div>
-
-  <%= link_to "Edit", edit_dream_path(@dream) %>
-  <br>
-  <%= link_to "Delete", dream_path(@dream),
-        method: :delete,
-        data: { confirm: "Are you sure?" } %>
-  <br>
-  <%= link_to "Write a review", new_dream_review_path(@dream) %>
-  <br>
-  <%= link_to "Back", dreams_path %>
+  <div class="d-flex">
+    <div class="dream-show-button-bottom">
+      <%= link_to "Back", dreams_path %>
+    </div>
+    <div class="dream-show-button-bottom">
+      <%= link_to "Edit Dream", edit_dream_path(@dream) %>
+    </div>
+    <div class="dream-show-button-bottom">
+      <%= link_to "Delete Dream", dream_path(@dream),
+            method: :delete,
+            data: { confirm: "Are you sure?" } %>
+    </div>
+  </div>
   <br>
 </div>

@@ -1,1 +1,7 @@
-<%= render 'form', review: @review, dream: @dream %>
+<div class="container">
+  <%= render 'form', review: @review, dream: @dream %>
+  <%= link_to "Delete", review_path(@review),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %>
+
+</div>
