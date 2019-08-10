@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-puts 'Cleaning database...'
+puts 'Cleaning dreams...'
 Dream.destroy_all
 
 puts 'Creating dreams...'
@@ -63,4 +63,99 @@ dreams_attributes = [
   }
 ]
 Dream.create!(dreams_attributes)
-puts 'Finished!'
+puts 'Finished dreams!'
+
+
+puts 'Cleaning dreams...'
+Review.destroy_all
+
+puts 'Creating reviews...'
+reviews_attributes = [
+  {
+    accuracy: '10',
+    value: '10',
+    design: '10',
+    dream_id: '1'
+    user_id: '1'
+  },
+  {
+    accuracy: '10',
+    value: '10',
+    design: '10',
+    dream_id: '1'
+    user_id: '2'
+  },
+  {
+    accuracy: '10',
+    value: '10',
+    design: '10',
+    dream_id: '1'
+    user_id: '3'
+  },
+  {
+    accuracy: '9',
+    value: '9',
+    design: '9',
+    dream_id: '2'
+    user_id: '1'
+  },
+  {
+    accuracy: '9',
+    value: '9',
+    design: '9',
+    dream_id: '2'
+    user_id: '2'
+  },
+  {
+    accuracy: '9',
+    value: '9',
+    design: '9',
+    dream_id: '2'
+    user_id: '3'
+  },
+  {
+    accuracy: '8',
+    value: '8',
+    design: '8',
+    dream_id: '3'
+    user_id: '1'
+  },
+  {
+    accuracy: '8',
+    value: '8',
+    design: '8',
+    dream_id: '3'
+    user_id: '2'
+  },
+  {
+    accuracy: '8',
+    value: '8',
+    design: '8',
+    dream_id: '3'
+    user_id: '3'
+  },
+  {
+    accuracy: '7',
+    value: '7',
+    design: '7',
+    dream_id: '4'
+    user_id: '1'
+  },
+  {
+    accuracy: '7',
+    value: '7',
+    design: '7',
+    dream_id: '4'
+    user_id: '2'
+  },
+  {
+    accuracy: '7',
+    value: '7',
+    design: '7',
+    dream_id: '4'
+    user_id: '3'
+  }
+]
+
+Review.create!(reviews_attributes)
+puts 'Finished reviews!'
