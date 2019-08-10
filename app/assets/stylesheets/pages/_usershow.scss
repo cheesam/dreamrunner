@@ -1,0 +1,58 @@
+.user-container {
+  display: flex;
+  background-color: black;
+  padding: 20px;
+  h2 {
+    color: white
+  }
+}
+
+.reviews {
+  display: flex;
+}
+
+.raitings {
+  display: flex;
+  justify-content: space-around;
+}
+
+#ideogram {
+  height: 100vh;
+  position: sticky;
+  top: 0;
+}
+
+.card-product {
+  overflow: hidden;
+  height: 120px;
+  background: black;
+  border: 2px solid white;
+  display: flex;
+  align-items: center;
+  margin: 10px
+}
+
+.card-product img {
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
+}
+
+.card-product h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-product p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+  color: white
+}
+
+.card-product .card-product-infos {
+  padding: 16px;
+}
