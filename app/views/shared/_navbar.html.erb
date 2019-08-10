@@ -1,4 +1,4 @@
-<div class="navbar navbar-expand-sm navbar-lewagon">
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <%= link_to root_path, class: "navbar-brand" do %>
    <%= image_tag "logo.png" %>
     <% end %>
@@ -12,22 +12,22 @@
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <li class=<%= current_class?(root_path) %>>
-          <%= link_to "Home", root_path, class: "link-colour nav-link" %>
+          <%= link_to "Home", root_path, class: "nav-link" %>
         </li>
         <li class=<%= current_class?(new_dream_path) %>>
-          <%= link_to "Host a dream", new_dream_path, class: "nav-link link-colour" %>
+          <%= link_to "Host a dream", new_dream_path, class: "nav-link" %>
         </li>
         <li class="nav-item">
-          <%= link_to "Saved", "#", class: "nav-link link-colour" %>
+          <%= link_to "Saved", "#", class: "nav-link" %>
         </li>
         <li class="nav-item">
-          <%= link_to "Upcoming dreams", "#", class: "nav-link link-colour" %>
+          <%= link_to "Upcoming dreams", "#", class: "nav-link" %>
         </li>
         <li class="nav-item">
-          <%= link_to "Messages", "#", class: "nav-link link-colour" %>
+          <%= link_to "Messages", "#", class: "nav-link" %>
         </li>
         <li class="nav-item">
-          <%= link_to "Help", "#", class: "nav-link link-colour" %>
+          <%= link_to "Help", "#", class: "nav-link" %>
         </li>
         <li class="nav-item dropdown">
           <%= image_tag "https://avatars3.githubusercontent.com/u/34791470?s=460&v=4", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
@@ -38,7 +38,7 @@
         </li>
       <% else %>
         <li class="nav-item">
-          <%= link_to "Login", new_user_session_path, class: "nav-link link-colour" %>
+          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
         </li>
       <% end %>
     </ul>
