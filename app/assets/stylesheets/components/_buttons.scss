@@ -4,11 +4,17 @@
   color: white;
   padding: 8px 24px;
   border-radius: 4px;
-  background: #1EDD88;
+  background: $green;
   transition: background 0.3s ease;
+  font-weight: bold;
+  text-shadow: 0px 0px 5px rgba(0,0,0,0.8);
+  box-shadow: 0 0 15px rgba(255,255,255,0.2);
 }
 
 .btn-flat:hover {
-  background: #1BCB7F;
+  background: $lighter-green;
   color: white;
+  font-weight: bold;
+  text-shadow: 0px 0px 5px rgba(0,0,0,0.8);
+  box-shadow: 0 0 15px rgba(255,255,255,0.2);
 }
