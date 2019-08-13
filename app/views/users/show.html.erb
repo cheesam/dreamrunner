@@ -6,9 +6,9 @@
         <div class="card-product">
           <%= cl_image_tag sleep.dream.photo, height: 300, width: 400, crop: :fill %>
           <div class="card-product-infos">
-            <h2><%= sleep.dream.name %></h2>
+            <h3><%= sleep.dream.name %></h3>
             <p><%= sleep.dream.description %></p>
-            <p><%= sleep.date %></p>
+            <p>Date: <%= sleep.date %></p>
           </div>
         </div>
       <% end %>
@@ -16,14 +16,16 @@
     <h2>My Reviews</h2>
     <div class="reviews">
       <% @reviews.each do |review| %>
-        <div class="card-product">
+        <div class="card-product" id="reviews">
           <div class="card-product-infos">
-            <h2><%= review.content %></h2>
-            <div class="raitings">
-              <p><%= review.accuracy %></p>
-              <p><%= review.value %></p>
-              <p><%= review.design %></p>
+            <h4><%= review.content %></h4>
+            <div class="ratings">
+              <p>Accuracy: <%= review.accuracy %></p>
+              <p>Value: <%= review.value %></p>
+              <p>Design: <%= review.design %></p>
             </div>
+            <h5><%= review.dream.name %></h5>
+            <h5>Overall: <%= review.rating %></h5>
           </div>
         </div>
       <% end %>
