@@ -1,11 +1,12 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: black;
-  color: #E900FF;
-  font-family: 'Lexend Tera', sans-serif;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
   transition:.5s;
   a:hover {
-  color:red;
+  color:$green;
 }
 }
 
@@ -18,9 +19,14 @@
 }
 
 .link-colour {
-  color: #E900FF;
+  color: white;
+  font-style: normal;
 }
 
+.logo-font {
+  font-family: 'Kanit', sans-serif;
+  color: $green;
+}
 // .nav-link {
 //     a {color: #E900FF !important;
 //     text-decoration: none;

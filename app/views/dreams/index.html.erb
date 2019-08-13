@@ -12,10 +12,8 @@
         <div class="dream" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)),
          url('<%= cl_image_path dream.photo, crop: :fill %>')">
           <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
-          <div class="move">
             <h3><%= link_to(dream.name, dream_path(dream)) %></h3>
             <p><%= dream.description.split.first(10).join(' ') %>...</p>
-          </div>
           <!-- <div class="card-footer">
           </div> -->
         </div>
