@@ -1,17 +1,22 @@
 .user-container {
   display: flex;
-  background-color: black;
+  background-color: $black;
+  font-family: ‘Roboto’, sans-serif;
   padding: 20px;
   h2 {
-    color: white
+    color: $green;
+    font-weight: bold;
+    font-family: ‘Kanit’, sans-serif;
+    font-style: italic;
   }
 }
 
 .reviews {
   display: flex;
+  //
 }
 
-.raitings {
+.ratings {
   display: flex;
   justify-content: space-around;
 }
@@ -25,23 +30,70 @@
 .card-product {
   overflow: hidden;
   height: 120px;
-  background: black;
-  border: 2px solid white;
+  background: $gray;
+  border: 1px solid white;
   display: flex;
   align-items: center;
-  margin: 10px
+  margin: 20px 0;
+  img {
+    height: 100%;
+    width: 120px;
+    object-fit: cover;
+  }
+  p {
+    color: white;
+  }
+  h3 {
+    font-size: 20px;
+    color: $green;
+    font-weight: bold;
+    font-family: ‘Kanit’, sans-serif;
+    font-style: italic;
+  }
+  h4 {
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+    margin: 0;
+    text-align: center;
+  }
+  h5 {
+    color: $green;
+    font-size: 12px;
+    text-align: center;
+    font-weight: bold;
+  }
 }
 
-.card-product img {
-  height: 100%;
-  width: 120px;
-  object-fit: cover;
-}
-
-.card-product h2 {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
+#reviews {
+  overflow: hidden;
+  height: 120px;
+  background: $gray;
+  border: 1px solid white;
+  display: flex;
+  align-items: center;
+  margin: 20px;
+  img {
+    height: 100%;
+    width: 120px;
+    object-fit: cover;
+  }
+  h3 {
+    color: $green;
+  }
+  h4 {
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+    margin: 0;
+    text-align: center;
+  }
+  h5 {
+    color: $green;
+    font-size: 12px;
+    text-align: center;
+    font-weight: bold;
+  }
 }
 
 .card-product p {
@@ -50,7 +102,8 @@
   opacity: .7;
   margin-bottom: 0;
   margin-top: 8px;
-  color: white
+  color: white;
+  margin: 5px
 }
 
 .card-product .card-product-infos {
