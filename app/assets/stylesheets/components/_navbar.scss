@@ -26,12 +26,28 @@
 .logo-font {
   font-family: 'Kanit', sans-serif;
   color: $green;
+  &:hover {
+  animation: neon4 1.5s ease-in-out infinite alternate;
+  }
 }
-// .nav-link {
-//     a {color: #E900FF !important;
-//     text-decoration: none;
-//     &:hover {
-//     color: #E900FF;
-//     }
-//   }
-//  }
+
+
+.logo-font a {
+  color: #B6FF00;
+  font-family: "Kanit", sans-serif;
+  font-size: 0.8em;
+}
+
+.logo-font a:hover {
+  animation: neon4 1.5s ease-in-out infinite alternate;
+}
+
+
+@keyframes neon4 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #B6FF00, 0 0 70px #B6FF00, 0 0 80px #B6FF00, 0 0 100px #B6FF00, 0 0 150px #B6FF00;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #B6FF00, 0 0 35px #B6FF00, 0 0 40px #B6FF00, 0 0 50px #B6FF00, 0 0 75px #B6FF00;
+  }
+}

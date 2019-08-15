@@ -2,7 +2,11 @@ class DreamsController < ApplicationController
   before_action :set_dream, only: [:show, :edit, :update, :destroy]
 
   def index         # GET /dreams
-    @dreams = Dream.all
+    if params[:query].present?
+      @dreams = Dream.search_by_name_and_description(params[:query])
+    else
+      @dreams = Dream.all
+    end
   end
 
   def show          # GET /dreams/:id
