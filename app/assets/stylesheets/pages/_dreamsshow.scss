@@ -4,6 +4,10 @@
   color: white;
 }
 
+.show-font-colour {
+  color: $green;
+}
+
 .details-section {
   padding-right: 5%;
 }
@@ -16,51 +20,68 @@
   padding-right: 10px;
 }
 
-.card-review {
-  overflow: hidden;
-  height: 120px;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  display: flex;
-  margin-bottom: 2vh;
-  color: black;
-}
-
-.card-review img {
-  height: 100%;
-  width: 120px;
-  object-fit: contain;
-}
-
-.card-review h2 {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
-}
-
-.card-review p {
-  font-size: 12px;
-  line-height: 1.4;
-  opacity: .7;
-  margin-bottom: 0;
-  margin-top: 8px;
-  align-items: center;
-}
-
-.card-review .card-review-infos {
-  padding: 16px;
-}
-
-.review-card-content {
-  display: block;
-  align-items: center;
-  padding-left: 10px;
-}
-
 .review-card-edit {
   align-items: center;
 }
 
 .dream-description {
   padding-top: 20px;
+}
+
+.sleep-booking-form {
+  padding: 20px;
+  color: white;
+  position: sticky;
+  top: 10;
+  background-color: $light-gray;
+  border-color: white;
+}
+
+.btn-ghost {
+  color: white;
+  border: 1px solid white;
+  padding: 8px 24px;
+  border-radius: 50px;
+  transition: opacity 0.3s ease;
+}
+
+.review-card {
+  overflow: hidden;
+  height: 120px;
+  border: solid 2px white;
+  display: flex;
+  align-items: center;
+  color: white;
+  margin-bottom: 2vh;
+  background-color: $light-gray;
+}
+
+.review-card img {
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.review-card h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.review-card p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.review-card-edit {
+  float: right;
+}
+
+.review-card-infos {
+  padding: 16px;
+  width: 100%;
 }
