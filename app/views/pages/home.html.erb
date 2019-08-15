@@ -19,7 +19,7 @@
 
 <div class="container">
   <h2>Dreams picked by critics</h2>
-  <% @dreams_critics_choice.each do |dream| %>
+  <% @dreams.each do |dream| %>
     <div class="card-product">
       <img src="<%= cl_image_path dream.photo %>">
         <h2><%= dream.name %></h2>
