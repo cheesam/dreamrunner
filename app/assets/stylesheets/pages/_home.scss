@@ -3,11 +3,17 @@
 @import "components/buttons";
 @import "components/cards";
 
-p {
+h2 {
+  margin-top: 10px;
   color: white;
   text-shadow: 1px 1px 6px rgba(255,255,255,0.4);
 }
 
 body {
   background-color: black;
+}
+
+p {
+  color: white;
+  text-shadow: 1px 1px 6px rgba(255,255,255,0.4);
 }

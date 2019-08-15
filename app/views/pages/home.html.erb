@@ -7,6 +7,7 @@
 </div>
 
 <div class="container">
+  <h2>Some of our favourites</h2>
   <div class="cards">
     <% @dreams.each do |dream| %>
       <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path dream.photo, height: 300, width: 400, crop: :fill %>')">
@@ -16,3 +17,14 @@
   </div>
 </div>
 
+<div class="container">
+  <h2>Dreams picked by critics</h2>
+  <% @dreams_critics_choice.each do |dream| %>
+    <div class="card-product">
+      <img src="<%= cl_image_path dream.photo %>">
+        <h2><%= dream.name %></h2>
+        <p><%= dream.description %></p>
+      </div>
+    <% end %>
+  </div>
+</div>
