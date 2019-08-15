@@ -75,7 +75,7 @@ dream.save!
 
 dream = Dream.new(name: 'Get adopted by Mick Jagger',
   category: 'Nostalgia',
-  price:  '',
+  price:  '70',
   description: 'And stop giving a shit about ordinary things',
   user_id: 1,
 )
