@@ -1,12 +1,12 @@
 <div class="dreams-show-background">
   <div class="container">
-    <h1 style="padding-top: 2vh;"><%= @dream.name %></h1>
+    <h1 class="show-font-colour" style="padding-top: 2vh;"><%= @dream.name %></h1>
     <hr />
     <div class="row">
       <div class="col-sm-12 col-md-8 details-section">
         <%= cl_image_tag @dream.photo, height: 400, width: 600 %>
         <div class="d-flex dream-detail">
-          <ul class="detail-list show-font-colour">
+          <ul class="detail-list">
             <li><strong>Category:</strong> <%= @dream.category %></li>
             <li><strong>Price:</strong> <%= @dream.price %></li>
           </ul>
@@ -31,7 +31,7 @@
                 <h2><%= review.content %></h2>
                 <div class="d-flex justify-content-between">
                   <p><strong>Accuracy:</strong> <%= review.accuracy %> <strong>Design:</strong>  <%= review.design %> <strong>Value:</strong>  <%= review.value %> <strong>Overall Rating:</strong>  <%= review.rating %></p>
-                  <%= link_to "Edit Review", edit_dream_review_path(@dream, review), class: "review-card-edit" %>
+                  <%= link_to "Edit Review", edit_dream_review_path(@dream, review), class: "review-card-edit btn btn-ghost" %>
                 </div>
               </div>
             </div>

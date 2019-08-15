@@ -32,7 +32,7 @@
   padding: 20px;
   color: white;
   position: sticky;
-  top: 10;
+  top: 50px;
   background-color: $light-gray;
   border-color: white;
 }
@@ -79,6 +79,7 @@
 
 .review-card-edit {
   float: right;
+  font-size: 12px;
 }
 
 .review-card-infos {

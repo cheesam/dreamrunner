@@ -1,4 +1,6 @@
-<%= simple_form_for [@dream, @sleep] do |f| %>
-  <%= f.input :date %>
-  <%= f.submit "add a sleep booking", class: "btn btn-ghost" %>
-<% end %>
+<div class="container forms-font-colour">
+  <%= simple_form_for [@dream, @sleep] do |f| %>
+    <%= f.input :date %>
+    <%= f.submit "Add a sleep booking", class: "btn btn-ghost" %>
+  <% end %>
+</div>
