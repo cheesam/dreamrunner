@@ -26,7 +26,7 @@
           <div>
             <% @reviews.each do |review| %>
             <div class="review-card">
-              <%= cl_image_tag review.user.photo %>
+              <%= cl_image_tag review.user.photo, width: 200, height: 200, crop: :thumb, gravity: :face %>
               <div class="review-card-infos">
                 <h2><%= review.content %></h2>
                 <div class="d-flex justify-content-between">
