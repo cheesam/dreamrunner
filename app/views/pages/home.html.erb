@@ -1,8 +1,8 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1538370965046-79c0d6907d47?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);">
   <div class="container">
-    <h1>Dreamrunner</h1>
-    <p>Escapism for the masses</p>
-    <%= link_to "Book now", dreams_path, class: "btn btn-flat" %>
+    <div class="home-head">
+    <h1>Escapism for the masses</h1>
+    </div>
   </div>
 </div>
 
@@ -30,11 +30,13 @@
 
 <div class="container">
   <h2>Dreams picked by critics</h2>
-  <% @dreams.each do |dream| %>
+  <% @dreams_critics_choice.first(3).each do |dream| %>
     <div class="card-product">
       <img src="<%= cl_image_path dream.photo %>">
-        <h2><%= dream.name %></h2>
+      <div class="card-info">
+        <h2><%= link_to dream.name, dream_path(dream) %></h2>
         <p><%= dream.description %></p>
+      </div>
       </div>
     <% end %>
   </div>

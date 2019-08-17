@@ -22,7 +22,6 @@ class ReviewsController < ApplicationController
     if @review.save
       redirect_to dream_path(@dream)
     else
-      raise
       render :new
     end
   end

@@ -78,8 +78,12 @@ body {
   transition: visibility 1s,opacity 1s ease-out;
   opacity: 0;
   visibility: hidden;
-  color: $green;
+  color: $white;
   text-shadow: 1px 1px black;
+   &:hover {
+    text-decoration: none;
+    color: $green;
+   }
    }
   }
   p {
