@@ -10,26 +10,31 @@ puts 'Cleaning users...'
 User.destroy_all
 
 puts 'Creating dreamers...'
-users_attributes = [
-  {
-    email: 'sam@dreamrunner.com',
-    password: '123456',
-  },
-  {
-    email: 'egor@dreamrunner.com',
-    password: '123456',
-  },
-  {
-    email: 'david@dreamrunner.com',
-    password: '123456',
-  },
-  {
-    email: 'sunny@dreamrunner.com',
-    password: '123456',
-  }
-]
 
-User.create!(users_attributes)
+user = User.new(email: 'sam@dreamrunner.com',
+    password: '123456',
+  )
+user.remote_photo_url = 'https://res.cloudinary.com/thaicharoens/image/upload/v1566038309/ever0nlb6berck508iw1.jpg'
+user.save!
+
+user = User.new(email: 'egor@dreamrunner.com',
+    password: '123456',
+  )
+user.remote_photo_url = 'https://res.cloudinary.com/thaicharoens/image/upload/v1566039182/xu1udtfnjqdpceogiyfj.jpg'
+user.save!
+
+user = User.new(email: 'sunny@dreamrunner.com',
+    password: '123456',
+  )
+user.remote_photo_url = 'https://res.cloudinary.com/thaicharoens/image/upload/v1565894997/dxhmecdkkmsxytapykf2.jpg'
+user.save!
+
+user = User.new(email: 'david@dreamrunner.com',
+    password: '123456',
+  )
+user.remote_photo_url = 'https://res.cloudinary.com/thaicharoens/image/upload/v1566038679/uskypjdm1wq9jw9iv4ec.jpg'
+user.save!
+
 puts 'Users created!'
 
 puts 'Cleaning dreams...'
@@ -49,7 +54,7 @@ dream.save!
 dream = Dream.new(name: 'The Charge of the Light Brigade',
   category: 'Transcendental Death',
   price:  '345',
-  description: '"The Balance of Powers has to be maintained", declares Queen Victoria. You are the man she is looking for. Lead a historic, yet completely unnecessary cavalry charge into a glorious death.',
+  description: 'The Balance of Powers has to be maintained", declares Queen Victoria. You are the man she is looking for. Lead a historic, yet completely unnecessary cavalry charge into a glorious death.',
   user_id: 1,
 )
 dream.remote_photo_url = 'https://res.cloudinary.com/thaicharoens/image/upload/v1565293293/z18uenshq7ctq82mg2lm.jpg'
@@ -108,6 +113,7 @@ Review.destroy_all
 puts 'Creating reviews...'
 reviews_attributes = [
   {
+    content: 'Pure perfection. Exactly as described.',
     accuracy: '10',
     value: '10',
     design: '10',
@@ -115,6 +121,7 @@ reviews_attributes = [
     user_id: '1'
   },
   {
+    content: 'Ruby, ruby, ruby!!! What a dream!',
     accuracy: '10',
     value: '10',
     design: '10',
@@ -122,6 +129,7 @@ reviews_attributes = [
     user_id: '2'
   },
   {
+    content: 'The stuff of dreams, this was so wild.',
     accuracy: '10',
     value: '10',
     design: '10',
@@ -129,6 +137,15 @@ reviews_attributes = [
     user_id: '3'
   },
   {
+    content: 'This reminded me of my time at Le Wagon, a real blast from the past. Oh what a life it would be to stay as a rails console.',
+    accuracy: '10',
+    value: '10',
+    design: '10',
+    dream_id: '1',
+    user_id: '4'
+  },
+  {
+    content: 'Dreamy stuff... the charge to vicotry for Queen and country.',
     accuracy: '9',
     value: '9',
     design: '9',
@@ -136,6 +153,7 @@ reviews_attributes = [
     user_id: '1'
   },
   {
+    content: 'I am a knight, I was born to fight.',
     accuracy: '9',
     value: '9',
     design: '9',
@@ -143,6 +161,7 @@ reviews_attributes = [
     user_id: '2'
   },
   {
+    content: 'For there is no better way to die.',
     accuracy: '9',
     value: '9',
     design: '9',
@@ -150,6 +169,15 @@ reviews_attributes = [
     user_id: '3'
   },
   {
+    content: 'What a ride!',
+    accuracy: '9',
+    value: '9',
+    design: '9',
+    dream_id: '2',
+    user_id: '4'
+  },
+  {
+    content: 'I was truely swept away...',
     accuracy: '8',
     value: '8',
     design: '8',
@@ -157,39 +185,12 @@ reviews_attributes = [
     user_id: '1'
   },
   {
+    content: 'Pure unadulterated sensuality, what a journey.',
     accuracy: '8',
     value: '8',
     design: '8',
     dream_id: '3',
     user_id: '2'
-  },
-  {
-    accuracy: '8',
-    value: '8',
-    design: '8',
-    dream_id: '3',
-    user_id: '3'
-  },
-  {
-    accuracy: '7',
-    value: '7',
-    design: '7',
-    dream_id: '4',
-    user_id: '1'
-  },
-  {
-    accuracy: '7',
-    value: '7',
-    design: '7',
-    dream_id: '4',
-    user_id: '2'
-  },
-  {
-    accuracy: '7',
-    value: '7',
-    design: '7',
-    dream_id: '4',
-    user_id: '3'
   }
 ]
 
