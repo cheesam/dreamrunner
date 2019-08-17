@@ -177,7 +177,7 @@ reviews_attributes = [
     user_id: '4'
   },
   {
-    content: 'I was truely swept away...',
+    content: 'I was truly swept away...',
     accuracy: '8',
     value: '8',
     design: '8',
@@ -191,6 +191,38 @@ reviews_attributes = [
     design: '8',
     dream_id: '3',
     user_id: '2'
+  },
+  {
+    content: '',
+    accuracy: '8',
+    value: '8',
+    design: '8',
+    dream_id: '4',
+    user_id: '2'
+  },
+  {
+    content: '',
+    accuracy: '8',
+    value: '8',
+    design: '8',
+    dream_id: '5',
+    user_id: '3'
+  },
+  {
+    content: '',
+    accuracy: '8',
+    value: '8',
+    design: '8',
+    dream_id: '6',
+    user_id: '2'
+  },
+  {
+    content: '',
+    accuracy: '8',
+    value: '8',
+    design: '8',
+    dream_id: '7',
+    user_id: '4'
   }
 ]
 
