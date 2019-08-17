@@ -193,7 +193,7 @@ reviews_attributes = [
     user_id: '2'
   },
   {
-    content: '',
+    content: 'I never thought I could get this exited!',
     accuracy: '8',
     value: '8',
     design: '8',
@@ -201,7 +201,7 @@ reviews_attributes = [
     user_id: '2'
   },
   {
-    content: '',
+    content: 'Not for the faint of heart oh ho ho, not at all...',
     accuracy: '8',
     value: '8',
     design: '8',
@@ -209,7 +209,7 @@ reviews_attributes = [
     user_id: '3'
   },
   {
-    content: '',
+    content: 'It made me see god',
     accuracy: '8',
     value: '8',
     design: '8',
@@ -217,7 +217,7 @@ reviews_attributes = [
     user_id: '2'
   },
   {
-    content: '',
+    content: 'I feel like I now have unfinished business',
     accuracy: '8',
     value: '8',
     design: '8',
