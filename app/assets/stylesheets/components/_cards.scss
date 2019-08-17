@@ -44,12 +44,23 @@
   height: 100%;
   width: 120px;
   object-fit: cover;
+  margin-right: 20px;
 }
 
 .card-product h2 {
   font-size: 16px;
   font-weight: bold;
-  margin: 0;
+  margin: 5px;
+  text-decoration: none;
+  color: $white;
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  a:hover {
+  color:$green;
+  text-decoration: none;
+}
 }
 
 .card-product p {

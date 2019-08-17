@@ -10,6 +10,29 @@
 }
 }
 
+.dropdown {
+  img:hover {
+    opacity: 0.75;
+    cursor: pointer;
+
+  }
+
+}
+
+.dropdown-menu {
+  background-color: black;
+  color: white;
+}
+
+.dropdown-item {
+  color: white;
+  &:hover {
+    background-color: black;
+    color: $green;
+  }
+}
+
+
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
