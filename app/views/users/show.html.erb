@@ -18,13 +18,13 @@
       <% @reviews.each do |review| %>
         <div class="card-product" id="reviews">
           <div class="card-product-infos">
+            <h5><%= review.dream.name %></h5>
             <h4><%= review.content %></h4>
             <div class="ratings">
               <p>Accuracy: <%= review.accuracy %></p>
               <p>Value: <%= review.value %></p>
               <p>Design: <%= review.design %></p>
             </div>
-            <h5><%= review.dream.name %></h5>
             <h5>Overall: <%= review.rating %></h5>
           </div>
         </div>
