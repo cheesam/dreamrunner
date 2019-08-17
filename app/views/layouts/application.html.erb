@@ -12,8 +12,11 @@
   <body>
     <!-- app/views/layouts/application.html.erb -->
   <%= render 'shared/navbar' %>
+  <div style="min-height: calc(100vh - 60px)">
     <%= yield %>
-    <%= javascript_include_tag 'application' %>
-    <%= javascript_pack_tag 'application' %>
+  </div>
+  <%= javascript_include_tag 'application' %>
+  <%= javascript_pack_tag 'application' %>
+  <%= render 'shared/footer' %>
   </body>
 </html>

@@ -18,6 +18,17 @@
 </div>
 
 <div class="container">
+  <h2>Latest dreams</h2>
+  <div class="cards">
+    <% @dreams_latest.each do |dream| %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path dream.photo, height: 300, width: 400, crop: :fill %>')">
+        <%= link_to dream.name, dream_path(dream) %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="container">
   <h2>Dreams picked by critics</h2>
   <% @dreams_critics_choice.first(3).each do |dream| %>
     <div class="card-product">
