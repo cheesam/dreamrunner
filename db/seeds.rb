@@ -137,7 +137,7 @@ reviews_attributes = [
     user_id: '3'
   },
   {
-    content: 'This reminded me of my time at Le Wagon, a real blast from the past. Oh what a life it would be to stay as a rails console.',
+    content: 'This reminded me of my time at Le Wagon, a real blast from the past.',
     accuracy: '10',
     value: '10',
     design: '10',
@@ -193,7 +193,7 @@ reviews_attributes = [
     user_id: '2'
   },
   {
-    content: 'I never thought I could get this exited!',
+    content: 'I never thought I could get this excited!',
     accuracy: '8',
     value: '8',
     design: '8',
