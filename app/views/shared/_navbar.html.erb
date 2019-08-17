@@ -14,20 +14,14 @@
         <li class=<%= current_class?(root_path) %>>
           <%= link_to "Home", root_path, class: "link-colour nav-link" %>
         </li>
+        <li class=<%= current_class?(dreams_path) %>>
+          <%= link_to "Search your dream", dreams_path, class: "link-colour nav-link" %>
+        </li>
         <li class=<%= current_class?(new_dream_path) %>>
           <%= link_to "Host a dream", new_dream_path, class: "nav-link link-colour" %>
         </li>
         <li class="nav-item">
-          <%= link_to "Saved", "#", class: "nav-link link-colour" %>
-        </li>
-        <li class="nav-item">
           <%= link_to "Upcoming dreams", user_path(current_user), class: "nav-link link-colour" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "Messages", "#", class: "nav-link link-colour" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "Help", "#", class: "nav-link link-colour" %>
         </li>
         <li class="nav-item dropdown">
           <%= image_tag "https://avatars3.githubusercontent.com/u/34791470?s=460&v=4", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>

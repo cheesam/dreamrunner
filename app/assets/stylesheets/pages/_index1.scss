@@ -4,6 +4,47 @@ body {
    background-color: black;
  }
 
+.search {
+  display: flex;
+  justify-content: center;
+
+}
+
+.search-form {
+  display: flex;
+}
+
+.search-box {
+  width: 100%;
+  max-width: 500px;
+  min-width: 100px;
+  margin-right: 20px;
+  border-radius: 50px;
+  border: 1px solid $gray;
+  background-color: $gray;
+  color: white;
+  text-indent: 3px;
+  outline: none;
+}
+
+.search-button {
+  color: white;
+  background-color: $gray;
+  border: 1px solid white;
+  padding: 8px 24px;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  &:hover {
+  color: $gray;
+  background-color: $white;
+  border: 1px solid $gray;
+  border-radius: 50px;
+  }
+}
+::placeholder {
+  color: #a6a9ad;
+}
+
 .dreams-list {
   display: grid;
   align-items: center;
